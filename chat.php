@@ -1,6 +1,6 @@
 <?php 
   session_start();
-  include_once "/wamp64/www/dating-website/connection.php";
+  include_once "connection.php";
   if(!isset($_SESSION['unique_id'])){
     header("location: login-user.php");
   }

@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(isset($_SESSION['unique_id'])){
-        include_once "/wamp64/www/dating-website/connection.php";
+        include_once "../connection.php";
         $logout_id = mysqli_real_escape_string($con, $_GET['logout_id']);
         if(isset($logout_id)){
             $active = "Offline now";

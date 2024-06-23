@@ -1,3 +1,3 @@
 <?php 
-$con = mysqli_connect('localhost:3308', 'root', '', 'SoulMate');
+$con = mysqli_connect('localhost:3306', 'root', '', 'SoulMate');
 ?>

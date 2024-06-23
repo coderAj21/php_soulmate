@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include_once "/wamp64/www/dating-website/connection.php";
+    include_once "../connection.php";
     $outgoing_id = $_SESSION['unique_id'];
 
     $sql4 = "SELECT uid from usertable where unique_id='$_SESSION[unique_id]'";
@@ -16,18 +16,17 @@
         array_push($matching_uids_list, $uid2);
     }
     $matching_uids_list = implode(",", $matching_uids_list);
-    
-    $sql3 = "SELECT up.*,ut.* FROM userprofile up,usertable ut where up.uid=ut.uid and ut.uid != '$current_user_uid' and ut.uid in ($matching_uids_list)";
-    $query3 = mysqli_query($con, $sql3);
-    #$row3 = mysqli_fetch_assoc($query3);
+    // $sql3 = "SELECT up.*,ut.* FROM userprofile as up,usertable as ut where up.uid=ut.uid and ut.uid != '$current_user_uid' and ut.uid in ($matching_uids_list)";
+    // $query3 = mysqli_query($con, $sql3);
+    // $row3 = mysqli_fetch_assoc($query3);
 
-    #$sql = "SELECT * FROM usertable WHERE NOT unique_id = {$outgoing_id} ORDER BY uid DESC";
-    #$query = mysqli_query($con, $sql);
-    $output = "";
-    if(!$query3 || mysqli_num_rows($query3) == 0){
-        $output .= "No users are available to chat";
-    }elseif(mysqli_num_rows($query3) > 0){
-        include_once "data.php";
-    }
-    echo $output;
+    // $sql = "SELECT * FROM usertable WHERE NOT unique_id = {$outgoing_id} ORDER BY uid DESC";
+    // $query = mysqli_query($con, $sql);
+    // $output = "";
+    // if(!$query3 || mysqli_num_rows($query3) == 0){
+    //     $output .= "No users are available to chat";
+    // }elseif(mysqli_num_rows($query3) > 0){
+    //     include_once "data.php";
+    // }
+    // echo $output;
 ?>

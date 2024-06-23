@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include_once "/wamp64/www/dating-website/connection.php";
+    include_once "../connection.php";
 
     $outgoing_id = $_SESSION['unique_id'];
     $searchTerm = mysqli_real_escape_string($con, $_POST['searchTerm']);
