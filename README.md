@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SoulMate-Online-Dating-Platform
 
 ## <img src="https://media.giphy.com/media/ObNTw8Uzwy6KQ/giphy.gif" width="30px">&nbsp;Contributors names
@@ -120,3 +121,6 @@ Users can access all the information of all their previous matches. This informa
 ### Chat module <br>
 The chat module allows users to interact by sending messages to each other.  The module allows interaction between users only if they there is a match that exists between the two users. A list is displayed that contains all the users last interacted with along with the last sent message. The module also shows the activity status of the users. Active is displayed if they are logged in on the website and inactive if they are not.
 <br>
+=======
+# php_soulmate
+>>>>>>> bb5b62387408aa3de51ed4a48d0b3f8fdddc4c21
